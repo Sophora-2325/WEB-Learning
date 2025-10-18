@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS函数</title>
+</head>
+<body>
+    <h1>要注意作用域的问题
+        全局变量都可以用
+        局部变量只能在所定义的局部内使用
+    </h1>
+    <script>
+        function hello(){
+            console.log('Hello,World!');
+            
+        }
+        hello();
+        function hello_with_return (){
+            return 'Hello,World!-返回值'
+        }
+        let a=hello_with_return();
+        console.log(a);
+        console.log(hello_with_return);
+        function hello_with_params(name){
+            console.log('Hello'+name);
+            
+        }
+        hello_with_params('如花');
+        hello_with_params('Alice');
+        let global_var ='全局变量';
+        function local_var_function(){
+            let local_var ='全局变量';
+            console.log('大音全局'+global_var);
+            console.log('局部变量'+local_var);
+        }
+        local_var_function();
+        console.log('quanju'+global_var);
+        console.log('局部'+local_var);
+        
+    </script>
+</body>
+</html>

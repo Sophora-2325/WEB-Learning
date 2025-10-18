@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS导入方式</title>
+    <link rel="stylesheet" href="styleh3.css">
+</head>
+<body>
+    <h1>内联样式>内部样式>外部样式</h1>
+    <h1 style="color: red;">这是一个一级标题（这个属于内联样式</h1> 
+    <p>
+        这是一个段落
+    </p>
+    <h2>这是一个二级标题（h2与p属于内部样式）</h2>
+    <h3>这是一个三级标题（h3属于外部样式）</h3>
+    <div class="cssrule">
+        CSS选择器模板<br>
+        style <br>
+            选择器{<br>
+                属性名：属性值<br>
+                属性名：属性值<br>
+            } <br>
+        /style <br>
+    </div>
+</body>
+<style>
+    p{
+        color:green;
+        font-size: 60px;
+    }
+
+    h2{
+        color: aqua;
+    }
+
+</style>
+</html>
