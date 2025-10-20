@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的WEB小课堂</title>
+</head>
+<body>
+    <h1>HTML的基础</h1>
+    <p class="head">
+        标题是Hx，x代表其字体的大小，x越小，head字体越大
+    </p>
+    <p class="p">
+        段落是p
+    </p>
+    <p class="a">
+        a是链接，
+        <a href="#">这是一个链接</a>
+    </p>
+    <p class="img">
+        <img src="COPY_WEB/left.png" alt="二妹"> <br>
+        图像经过img嵌入到HTML中<br>
+        src是图像的路径也可以是一个url <br>
+        alt是图像不显示时的解释文字
+        <img src="" alt="">
+    </p>
+
+    <br><br>
+    <span>换行加分割线使用的是hr</span><hr>
+    <h1>HTML元素</h1>
+    <p> 刚才我使用了两个br以进行换行 <br>
+    降下来的内容是HTML中另一关键内容--元素<br>
+    元素大体可以分为结束标签的有和无 <br>
+    大部分标签内可以填入属性,某些是空的<br>
+    </p>
+    <br> <br><hr>
+    <h1>HTML属性(一般描述于开始标签)</h1>
+    <p>属性是HTML元素提供的附件信息</p>
+    <p>属性通常出现在HTML标签中， <br>
+    用于定义元素的行为,样式，内容 <br>
+    或其他特性，属性以键值对出现，“name=value” <br>
+    通常情况下，使用双引号还是单引号都可以 <br> 
+    但如果属性中有双引号，则必须使用单引号 <br>
+    <a href="https://www.runoob.com/tags/html-reference.html">HTML标签参考手册</a>
+    </p>
+    <br><br><hr>
+    <h1>HTML文本格式化</h1>
+    <b>这个文本是加粗的</b><br />
+    <strong>这个文本是加粗的</strong><br />
+    <big>这个文本字体放大</big><br />
+    <em>这个文本是斜体的</em><br />
+    <i>这个文本是斜体的</i><br />
+    <small>这个文本是缩小的</small><br />
+    这个文本包含<sub>下标</sub><br />
+    这个文本包含<sup>上标</sup>
+    <br><br><hr>
+    <h1>HTML 链接</h1>
+    <h2>链接定义基本语法</h2>
+    <i> a href="URL">链接文本 /a </i> <br>
+    <a> 标签：定义了一个超链接（anchor）。它是 HTML 中用来创建可点击链接的主要标签。<br>
+    href 属性：指定目标 URL，当点击链接时，浏览器将导航到此 URL。<br>
+    <a href="https://www.example.com">访问 Example</a><br>
+    <a href="https://www.example.com" target="_blank" rel="noopener">新窗口打开，使用targetExample</a>
+    <p style="margin-bottom: 5%;">
+        <h2>网页链接编辑时的主要方式</h2>
+        <B>target：定义链接的打开方式。</B> <br>
+        _blank: 在新窗口或新标签页中打开链接。 <br>
+        _self: 在当前窗口或标签页中打开链接（默认）。 <br>
+        _parent: 在父框架中打开链接。 <br>
+        _top: 在整个窗口中打开链接，取消任何框架。 <br>
+    </p>
+    <p margin-bottom: 5%;>
+        <B>rel：定义链接与目标页面的关系。</B><br>
+        nofollow: 表示搜索引擎不应跟踪该链接常用于外部链接。<br>
+        noopener 和 noreferrer: 防止在新标签中打开链接时的安全问题，
+        尤其是使用 target="_blank" 时。<br>
+        noopener: 防止新的浏览上下文（页面）
+        访问window.opener属性和open方法。<br>
+        noreferrer: 不发送referer header（即不告诉目标网站你从哪里来的）。<br>
+        noopener noreferrer: 同时使用noopener和noreferrer。<br>
+        例子: <a href="https://www.example.com" rel="noopener noreferrer">安全链接</a><br>
+        <br>
+        <br>
+    </p>
+    <P >
+        <h2>一些额外功能的链接属性</h2>
+        download：提示浏览器下载链接目标而不是导航到该目标。<br>
+        如果指定了文件名，浏览器会提示下载并保存为指定文件名。 <br>
+        <a href="file.pdf" download="example.pdf">下载文件</a>
+        title：定义链接的额外信息，当鼠标悬停在链接上时显示的工具提示。<br>
+        <a href="https://www.example.com" title="访问 Example 网站">访问 Example</a> <br>
+        id：用于链接锚点，通常在同一页面中跳转到某个特定位置。 <br>
+        <!-- 链接到页面中的某个部分 -->
+        <a href="#section2">跳转到第2部分</a> <br>
+        <div id="section1">这是第1部分</div>
+
+        <div id="section2">这是第2部分</div>
+
+        hreflang: 指定链接的目标URL的语言
+        <a href="https://www.example.com/es" hreflang="es">访问西班牙语网站</a><br>
+
+        type: 指定链接资源的MIME类型
+        <a href="style.css" type="text/css">样式表</a><br>
+
+        class: 用于指定元素的类名（CSS中定义）
+        <a href="https://www.example.com" class="external-link">外部链接</a><br>
+
+        style: 直接在元素上定义CSS样式
+        <a href="https://www.example.com" style="color: red;"> 红色链接</a><br>
+    </P>
+</body>
+</html>
