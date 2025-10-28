@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="跳转10秒倒计时.css">
+</head>
+<body>
+
+    <div class="box">
+        <div class="UP">
+                    <p>商品：Web前端课程</p>
+        <p>原价：1980元</p>
+        <p>现价：1.98元</p>
+        <p>内容：HTML、CSS、JS</p>
+        <p>地址：北京市朝阳区</p>
+        <p class="between">
+            <button>取消</button>
+            <button>支付</button>
+        </p>
+        </div>
+    </div>
+        <script>
+        document.getElementsByTagName('button')[1].onclick = function() {
+            let res =window.confirm('您确定要支付吗？');
+            if(res){
+                location.href = '跳转成功.html';//跳转URL时使用location.href='URL地址';
+            }
+    }  
+            //     doucment.getElementsByTagName('button')[1].onclick =function(){
+            //     let res =window.confirm('是否确定支付');
+            //     if(res){
+            //         location.href('跳转成功.html');
+            //     }
+            // }
+    </script>
+</body>
+</html>
+<!--
+这次的内容复习了一些关于HTML和CSS的排版知识
+又学习了部分JS关于页面跳转的基本知识，
+对于如何得到特定对象进行特定操作
+以及箭头函数的编写
+setInterval()函数的使用与setTimeout()函数的使用
+window的三种类型：confirm alert prompt
+  --> 

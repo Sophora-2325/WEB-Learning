@@ -1,0 +1,12 @@
+.box{
+    width: 200px;
+    height: 280px;
+    background-color: #eee;
+    padding: 20px;
+    margin: 0 auto;
+}
+.between {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}

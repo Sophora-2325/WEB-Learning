@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 0 auto;
+            width:500px;
+        }
+        #jumpTo{
+            color:red;
+            font-size:30px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>恭喜您跳转成功</h2>
+    <span id="jumpTo">10</span>秒后自动返回首页
+    <p><button>立即返回</button></p>
+</div>
+<script>
+    //逻辑：记载页面时，就触发定时器 10s
+    window.onload =function(){
+        let timer = 10;
+        setInterval(()=>{
+            timer--;
+            document.getElementById('jumpTo').innerText =timer;
+            if(timer == 0){
+                location.href = "https://bilibili.com";
+            }
+        },1000);
+//         setInterval(function(){
+//              timer--;
+//         document.getElementById('jumpTo').innerText = timer;
+//         if(timer===0){
+//         location.href='跳转10秒倒计时.html';
+//          }
+//         },1000);
+        document.getElementsByTagName('button')[0].onclick = function(){
+            location.href = "https://bilibili.com";
+        }
+    }    
+</script>
+</body>
+</html>

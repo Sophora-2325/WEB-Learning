@@ -1,0 +1,49 @@
+.father{
+    background-color: antiquewhite;
+    background-size: cover ;
+}
+.show ul{
+
+    text-align: center;
+    margin: 10%,10%,10%,10%;
+    padding: 20% 10% 10% 10%;
+    width: 60%;
+    font-size: 20px;
+    line-height: 2em;
+}
+li{
+    font-family: "微软雅黑";
+    color: blue;
+    text-align: justify;
+}
+.show h1{
+    text-align: center;
+}
+.show {
+    background-position: center;
+    background-image: url(bcgd.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 30%;
+    border: 3px solid black;
+}
+/* 这是一个CSS里的注释形式*/
+#left{
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: #000000;
+}
+a:hover{
+    color: red;}
+a:visited{
+    color: green;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

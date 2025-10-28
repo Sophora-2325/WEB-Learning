@@ -1,0 +1,36 @@
+.box{
+    width: 200px;
+    height: 280px;
+    margin: auto;
+}
+.code_show{
+    margin: 20px auto;
+    height: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content:space-around;
+}
+.code_input{
+    margin: 20px auto;
+}
+.input_code{
+    margin: 20px auto;
+    height: 30px;
+    font-size: 20px;
+}
+#Button1{
+    margin: 30px auto;
+}
+#linkbt{
+    font-size: 15px;
+    text-decoration: none;
+    color: blue;
+    ::hover{
+        color: red;
+    }
+}
+#checkbox{
+    font-size: 20px;
+    background-color: lightgreen;
+    opacity: 0.7;
+}
