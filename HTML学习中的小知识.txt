@@ -1,0 +1,16 @@
+制作网页中的表格需要：
+<table>定义为一个表格
+<thead>写表头
+<tr>
+<th>标题一</th>
+</tr>
+<thead>
+
+<tbody>写表身
+<td>数据一</td>
+<tbody>
+
+<tfoot>
+<tr>有时加点页脚</tr>
+</tfoot>
+</table>

@@ -11,7 +11,7 @@
       }
       .box {
         display: flex;
-        width: 700px;
+        width: 500px;
         height: 300px;
         border-left: 1px solid pink;
         border-bottom: 1px solid pink;
@@ -38,25 +38,24 @@
     </style>
   </head>
   <body>
-    <div class="box">
-      <div style="height: 125px">
-        <span>125</span>
-        <h4>第一季度</h4>
-      </div>
-      <div style="height: 200px">
-        <span>200</span>
-        <h4>第二季度</h4>
-      </div>
-      <div style="height: 186px">
-        <span>186</span>
-        <h4>第三季度</h4>
-      </div>
-      <div style="height: 192px">
-        <span>192</span>
-        <h4>第四季度</h4>
-      </div>
-    </div>
-
-    <script></script>
+    <script>
+      let arr = [];
+      for (let i = 0; i < 4; i++) {
+        arr.push(prompt(`请输入第${i + 1}季度的数据：`));
+      }
+      //盒子开头
+      document.write(`<div class="box">`);
+      //盒子中间  利用循环的形式
+      for (let i = 0; i < arr.length; i++) {
+        document.write(`
+          <div style="height: ${arr[i]}px">
+            <span>${arr[i]}</span>
+            <h4>第${i + 1}季度</h4>
+          </div>
+        `);
+      }
+      //盒子结尾
+      document.write(`<div>`);
+    </script>
   </body>
 </html>
