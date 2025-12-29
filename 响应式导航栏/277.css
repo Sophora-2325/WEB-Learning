@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f9fbfd;
+  color: #333;
+  line-height: 1.6;
+}
+/* 导航栏基础样式 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky; /* 启用粘性定位 */
+  top: 0; /* 距离顶部0px时变为固定定位 */
+  z-index: 1000; /* 确保元素在最上层显示 */
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4361ee;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li {
+  margin-left: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: #4361ee;
+}
+/* 焦点可见性 */
+.nav-links a:focus {
+  outline: 3px solid rgba(67, 97, 238, 0.12);
+  outline-offset: 2px;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4361ee;
+  transition: width 0.3s ease;
+}
+/*::after：在每个匹配的<a>元素内容之后插入伪元素*/
+.nav-links a:hover::after,
+.nav-links a.active::after,
+.nav-links a:focus::after {
+  width: 100%;
+}
+
+/* 汉堡菜单按钮 — 建议在 HTML 中使用 <button class="hamburger" aria-label="切换导航"> */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.hamburger:focus {
+  outline: 3px solid rgba(67, 97, 238, 0.18);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #4361ee;
+  margin: 3px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 2px;
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5rem;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    will-change: transform;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  }
+  .nav-links.active {
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* 汉堡菜单动画：变成 × */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 6px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -6px);
+  }
+}
+
+/* 页面内容占位 */
+.content {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2b2d42;
+}
+.content p {
+  margin-bottom: 1rem;
+  color: #555;
+}

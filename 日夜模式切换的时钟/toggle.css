@@ -1,0 +1,96 @@
+/*重置所有元素的margin和padding，并统一使用border-box盒模型以方便布局计算*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 使用felx布局将内容居中显示
+  最小高度设置为视口高度，确保内容垂直居中
+  设置字体和渐变背景
+  添加背景过度动画，便于夜间模式切换时的视觉效果 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /*视口高度100%*/
+  font-family: "Arial", sans-serif; /*设置字体*/
+  background: linear-gradient(
+    135deg,
+    #f5f7fa,
+    #c3cfe2
+  ); /*渐变背景linear-gradient*/
+  transition: background 0.6s ease; /*变化对象，变化时间，变化方式*/
+}
+/* 时钟容器内文本居中 */
+.clock-container {
+  text-align: center;
+}
+/* 时钟主体 */
+.clock {
+  background: rgba(255, 2555, 255, 0.2); /*红，绿，蓝，透明度；半透明背景*/
+  padding: 30px; /*设置内边距*/
+  border-radius: 20px; /*设置边框圆角*/
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /*设置边框阴影*/
+  backdrop-filter: blur(
+    10px
+  ); /*该属性可以为背景添加一个滤镜，blur可以规定背景的模糊程度也算一种滤镜*/
+  border: 1px, solid rgba(255, 255, 255, 0.5); /*设置边框基本形态*/
+  width: 300px;
+  margin: 0 auto;
+}
+/*时间显示样式：
+大号、加粗突出时间信息
+添加颜色过度动画，适配主题切换*/
+.time {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  transition: color 0.4s;
+}
+
+.date {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  background: #fff;
+  border: none; /*设置边框，用none就是移除所有边框*/
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer; /*cursor设置游标类型，指的是鼠标移动到上方后指针会变成的样式*/
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+/*使用伪类选择器，在被鼠标悬停的状态下：
+向上轻微移动按钮
+增强阴影效果提升立体感*/
+.toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 以下为夜间模式样式 */
+/* 更换深色背景 营造夜晚氛围 */
+body.night {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* 夜间模式下的时间和日期文字颜色调整为白色 */
+body.night .time,
+body.night .date {
+  color: #fff;
+}
+/* 夜间模式下的时钟背景更换为深色半透明 */
+body.night .clock {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+body.night .toggle-btn {
+  background: #111;
+  color: #fff;
+}

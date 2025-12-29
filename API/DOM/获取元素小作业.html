@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="nav">
+      <li>我的首页</li>
+      <li>产品介绍</li>
+      <li>联系方式</li>
+    </ul>
+    <script>
+      const nav = document.querySelector(".nav");
+      nav.style.backgroundColor = "lightgray";
+      console.log(nav);
+      const lis = document.querySelectorAll(".nav li"); //返回的是一个节点列表，而且是伪数组
+      //依次输出每一个li元素
+      lis.forEach((li) => {
+        console.log(li);
+      });
+    </script>
+  </body>
+</html>

@@ -44,3 +44,20 @@ outline：
 表格之间可以用
 1.colspan（跨列合并）或 
 2.rowspan（跨行合并）
+
+关于背景图的一些设定
+  background-image: url('背景图.jpg');
+  /* changed code */
+  background-size: contain;        /* 完整显示，不裁剪；可能有空白 */
+  background-position: center;     /* 居中显示 */
+  background-repeat: no-repeat;    /* 不重复平铺 */
+
+
+flex: 0 0 40% 是 flex 简写属性，分别表示三个值：
+
+各部分含义：
+
+属性	值	说明
+flex-grow	0	不扩张 — 当容器有剩余空间时，该元素不占用额外空间
+flex-shrink	0	不收缩 — 当容器空间不足时，该元素不被压缩
+flex-basis	40%	基础宽度 — 元素的初始宽度为父容器的 40%
